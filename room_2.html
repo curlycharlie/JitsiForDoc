@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jitsi Meet</title>
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <style>
+        #meet {
+            margin-left: auto;
+            margin-right: auto;
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="meet"></div>
+    
+</body>
+<script>
+    const domain = 'meet.jit.si';
+    const options = {
+        roomName: '290A7E58-2D31-4AFA-8176-AEB73167F296',
+        width: 1000,
+        height: 700,
+        parentNode: document.querySelector('#meet'),
+        lang: 'en'
+    };
+    const api = new JitsiMeetExternalAPI(domain, options);
+</script>
+</html>
